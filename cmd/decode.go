@@ -1,11 +1,10 @@
 package cmd
 
 import (
-	"encoding/hex"
 	"fmt"
-	"os"
 
 	"github.com/spf13/cobra"
+	"github.com/thequinbox/hexer/hextools"
 )
 
 var decodeCommand = &cobra.Command{
@@ -15,12 +14,8 @@ var decodeCommand = &cobra.Command{
 	Args: cobra.ExactArgs(1),
 	Run: func(c *cobra.Command, args []string) {
 		input := args[0]
-		result, err := hex.DecodeString(input)
-		if err != nil {
-			fmt.Println(err)
-			os.Exit(1)
-		}
-		fmt.Println(string(result))
+		result := hextools.Decode(input)
+		fmt.Println(result)
 	},
 }
 
