@@ -7,9 +7,9 @@ import (
 )
 
 var rootCmd = &cobra.Command{
-	Use: "hexer",
+	Use:   "hexer",
 	Short: "Encode or decode hex from your terminal",
-	Long: `Hexer allows you to convert to and from hex strings directly within your terminal.`,
+	Long:  `Hexer allows you to convert to and from hex strings directly within your terminal.`,
 }
 
 func Execute() {
