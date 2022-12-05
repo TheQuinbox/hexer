@@ -1,4 +1,4 @@
-package cmd
+package hexer
 
 import (
 	"os"

@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/thequinbox/hexer/cmd"
+	"github.com/thequinbox/hexer/cmd/hexer"
 )
 
 func main() {
-	cmd.Execute()
+	hexer.Execute()
 }
